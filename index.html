@@ -171,6 +171,33 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     font-size: 13px; color: var(--text-dim);
   }
+  .pix-box{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    margin: 28px 0 26px;
+    padding: 22px;
+    background: rgba(212,175,106,0.06);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .pix-box img{
+    width: 168px; height: 168px; border-radius: 8px; background:#fff; padding:8px; margin: 4px auto 14px;
+    display:block;
+  }
+  .pix-label{ font-size: 13px; color: var(--gold-soft); margin-bottom: 10px; letter-spacing: 0.5px; text-transform: uppercase;}
+  .pix-code{
+    display:block; width:100%; box-sizing:border-box;
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 12px; font-size: 11px; color: var(--text-dim);
+    word-break: break-all; font-family: monospace; margin-bottom: 10px;
+  }
+  .pix-copy{
+    font-family: inherit; cursor:pointer; border: 1px solid var(--gold); background: transparent;
+    color: var(--gold-soft); padding: 9px 20px; border-radius: 999px; font-size: 13px; font-weight:600;
+  }
+  .pix-copy:hover{ background: rgba(212,175,106,0.12); }
+  .pix-note{ font-size: 12.5px; color: var(--text-dim); margin-top: 12px; }
+  .or-sep{ font-size: 12.5px; color: var(--text-dim); margin: 18px 0 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
 </style>
 </head>
 <body>
@@ -248,6 +275,21 @@
         <li>Entrega digital em até 3 dias úteis</li>
         <li>Nota de transparência sobre o status científico do método</li>
       </ul>
+
+      <div class="pix-box">
+        <div class="pix-label">Pagar com Pix</div>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=00020101021126620014br.gov.bcb.pix0114%2B55169926311410222Mapa%20do%20Desenho%20Humano5204000053039865406180.005802BR5915MATHEUS%20L%20PUPIM6006FRANCA62070503%2A%2A%2A63046484" alt="QR Code Pix — R$180,00" loading="lazy">
+        <code class="pix-code" id="pixCode">00020101021126620014br.gov.bcb.pix0114+55169926311410222Mapa do Desenho Humano5204000053039865406180.005802BR5915MATHEUS L PUPIM6006FRANCA62070503***63046484</code>
+        <button type="button" class="pix-copy" id="pixCopyBtn" onclick="
+          navigator.clipboard.writeText(document.getElementById('pixCode').textContent).then(function(){
+            var b = document.getElementById('pixCopyBtn'); var orig = b.textContent;
+            b.textContent = 'Código copiado!'; setTimeout(function(){ b.textContent = orig; }, 2000);
+          });
+        ">Copiar código Pix</button>
+        <p class="pix-note">Chave: telefone +55 16 99263-1141 · Beneficiário: Matheus L Pupim · Valor: R$180,00<br>Após pagar, envie o comprovante e seus dados de nascimento (data, hora exata e cidade) pelo WhatsApp para darmos início ao seu mapa.</p>
+      </div>
+
+      <div class="or-sep">ou</div>
       <a href="https://wa.me/5516992631141?text=Ol%C3%A1!%20Quero%20meu%20Mapa%20de%20Desenho%20Humano%20por%20R%24180." class="cta">Pedir meu mapa no WhatsApp</a>
       <div class="price-compare">
         <div>Relatório básico grátis<span class="amt">gerador genérico</span></div>
