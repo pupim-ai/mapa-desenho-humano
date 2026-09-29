@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Desenho Humano Personalizado — R$180 | Enterprise Brain</title>
+<meta name="description" content="Descubra seu Tipo, Autoridade, Perfil e Cruz de Encarnação com um mapa de Desenho Humano calculado com efemérides astronômicas reais. Documento completo por R$180.">
+<style>
+  :root{
+    --bg: #0f0b1e;
+    --bg-soft: #161029;
+    --card: #1c1533;
+    --gold: #d4af6a;
+    --gold-soft: #e8cfa0;
+    --violet: #8a6fd8;
+    --text: #f2ede4;
+    --text-dim: #b9b0cf;
+    --border: rgba(212,175,106,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: radial-gradient(ellipse at top, #1a1333 0%, var(--bg) 60%);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .sans{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  a{ color: var(--gold-soft); }
+  .wrap{ max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header.hero{
+    padding: 88px 0 72px;
+    text-align:center;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+  h1{
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 0 0 22px;
+    font-weight: 400;
+    color: #fff;
+  }
+  h1 em{ color: var(--gold-soft); font-style: normal; }
+  .subhead{
+    font-size: 19px;
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+  .cta{
+    display:inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    color: #241a06;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 999px;
+    text-decoration:none;
+    font-size: 16px;
+    box-shadow: 0 10px 30px rgba(212,175,106,0.25);
+    transition: transform .15s ease;
+  }
+  .cta:hover{ transform: translateY(-2px); }
+  .cta-note{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    display:block; margin-top: 14px; font-size: 13px; color: var(--text-dim);
+  }
+  section{ padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type{ border-bottom: none; }
+  h2{
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 28px;
+    text-align:center;
+  }
+  h2 span{ color: var(--gold-soft); }
+  .lede{ text-align:center; color: var(--text-dim); max-width: 620px; margin: -10px auto 40px; font-size: 16.5px;}
+  .grid3{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 720px){ .grid3{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 22px;
+  }
+  .card h3{
+    font-size: 17px; color: var(--gold-soft); margin: 0 0 10px; font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+  .card p{ color: var(--text-dim); font-size: 15px; margin:0; }
+  .steps{ counter-reset: step; display:grid; gap: 22px; }
+  .step{ display:flex; gap: 20px; align-items:flex-start; }
+  .step-num{
+    flex: 0 0 auto;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(212,175,106,0.12); border: 1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--gold-soft); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
+  .step h3{ margin: 2px 0 6px; font-size: 17px; color: #fff; font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .step p{ margin:0; color: var(--text-dim); font-size: 15px; }
+  .price-box{
+    background: var(--card);
+    border: 1px solid var(--gold);
+    border-radius: 18px;
+    padding: 44px 32px;
+    text-align: center;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .price{
+    font-size: 56px;
+    color: var(--gold-soft);
+    font-weight: 400;
+    margin: 6px 0 2px;
+  }
+  .price small{ font-size: 20px; color: var(--text-dim); }
+  .price-compare{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 13px; color: var(--text-dim); margin: 18px 0 26px;
+    display:flex; justify-content:center; gap: 18px; flex-wrap:wrap;
+  }
+  .price-compare div{ text-align:center; }
+  .price-compare .amt{ display:block; font-size: 15px; color: var(--text); }
+  .price ul, .includes{
+    text-align:left; list-style:none; padding:0; margin: 0 0 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 14.5px; color: var(--text-dim);
+  }
+  .includes li{ padding: 7px 0 7px 26px; position:relative; }
+  .includes li::before{ content:"✦"; position:absolute; left:0; color: var(--gold); }
+  .faq-item{ margin-bottom: 24px; }
+  .faq-item h3{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 16px; color:#fff; margin: 0 0 6px; font-weight: 600;
+  }
+  .faq-item p{ margin:0; color: var(--text-dim); font-size: 15px; }
+  .transparency{
+    background: rgba(138,111,216,0.1);
+    border: 1px solid rgba(138,111,216,0.35);
+    border-radius: 14px;
+    padding: 22px 24px;
+    font-size: 14.5px;
+    color: var(--text-dim);
+  }
+  .transparency strong{ color: var(--text); }
+  footer{
+    text-align:center; padding: 48px 24px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 13px; color: var(--text-dim);
+  }
+  footer a{ color: var(--gold-soft); text-decoration:none; }
+  .final-cta{ text-align:center; padding: 72px 0; }
+  .badge-row{
+    display:flex; justify-content:center; gap: 28px; flex-wrap:wrap; margin-top: 34px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 13px; color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Enterprise Brain · Autoconhecimento aplicado</div>
+    <h1>Descubra como sua energia funciona<br><em>com o seu Mapa de Desenho Humano</em></h1>
+    <p class="subhead">Um documento personalizado com seu Tipo, Autoridade, Perfil e Cruz de Encarnação — calculado com efemérides astronômicas reais a partir da sua data, hora e local de nascimento.</p>
+    <a href="#pedir" class="cta">Quero meu mapa por R$180</a>
+    <span class="cta-note">Entrega em documento digital · sem mensalidade · pagamento único</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>O que é o <span>Desenho Humano</span>?</h2>
+    <p class="lede">Um sistema de autoconhecimento que combina astronomia, I Ching, Astrologia, Cabala e o sistema de Chakras para descrever como você foi desenhado para tomar decisões, se relacionar e usar sua energia.</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>Tipo</h3>
+        <p>Define sua estratégia natural de agir no mundo — Gerador, Manifestador, Projetor, Refletor ou Manifestante Gerador.</p>
+      </div>
+      <div class="card">
+        <h3>Autoridade</h3>
+        <p>Seu mecanismo interno mais confiável para tomar decisões — emocional, sacral, esplênica, entre outras.</p>
+      </div>
+      <div class="card">
+        <h3>Perfil e Cruz</h3>
+        <p>Os papéis que você tende a viver (ex: 4/6, 1/3) e o propósito de vida descrito pela sua Cruz de Encarnação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como calculamos o <span>seu mapa</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num sans">1</div>
+        <div>
+          <h3>Você envia data, hora exata e cidade de nascimento</h3>
+          <p>Quanto mais precisa a hora, mais confiável é a linha do seu Perfil — orientamos você a checar a certidão de nascimento se tiver dúvida.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num sans">2</div>
+        <div>
+          <h3>Calculamos as posições planetárias reais no instante do seu nascimento</h3>
+          <p>Usamos efemérides astronômicas (não estimativas) para o momento da Personalidade e para o instante da Consciência de Design, cerca de 88° solares antes — e validamos automaticamente possíveis efeitos de horário de verão na sua localidade e data.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num sans">3</div>
+        <div>
+          <h3>Você recebe um documento completo e explicado</h3>
+          <p>Tipo, Autoridade, Perfil, Centros definidos e abertos, canais ativos e Cruz de Encarnação — cada elemento explicado em linguagem simples, sem jargão indecifrável.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pedir">
+  <div class="wrap">
+    <h2>Investimento</h2>
+    <div class="price-box">
+      <div class="sans" style="color:var(--text-dim); font-size:14px;">Mapa de Desenho Humano personalizado</div>
+      <div class="price">R$180<small>&nbsp;único</small></div>
+      <ul class="includes">
+        <li>Cálculo com efemérides astronômicas reais (não é gerador genérico de internet)</li>
+        <li>Documento explicando Tipo, Autoridade, Perfil, Centros e Cruz de Encarnação</li>
+        <li>Linguagem acessível, sem depender de conhecimento prévio</li>
+        <li>Entrega digital em até 3 dias úteis</li>
+        <li>Nota de transparência sobre o status científico do método</li>
+      </ul>
+      <a href="https://wa.me/5516992631141?text=Ol%C3%A1!%20Quero%20meu%20Mapa%20de%20Desenho%20Humano%20por%20R%24180." class="cta">Pedir meu mapa no WhatsApp</a>
+      <div class="price-compare">
+        <div>Relatório básico grátis<span class="amt">gerador genérico</span></div>
+        <div>Relatório arquétipo<span class="amt">R$525+</span></div>
+        <div>Consultoria com certificado<span class="amt">R$1.000 – R$3.500</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item">
+      <h3>Preciso saber a hora exata do meu nascimento?</h3>
+      <p>Idealmente sim — alguns minutos de diferença podem mudar sua Linha e Perfil. Se você só tem uma hora aproximada, calculamos mesmo assim e avisamos quais elementos do mapa são mais sensíveis a essa margem de erro.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Vocês usam algum gerador automático de internet?</h3>
+      <p>Não. O cálculo roda com uma biblioteca de efemérides astronômicas reais, com verificação de horário de verão na data e local informados e checagem cruzada das posições planetárias — o mesmo padrão usado nos mapas que já entregamos com validação por eventos astronômicos reais (como eclipses).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Posso pedir o mapa de outra pessoa, como presente?</h3>
+      <p>Sim. É só informar os dados de nascimento da pessoa (com autorização dela) ao fazer o pedido.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Em quanto tempo recebo?</h3>
+      <p>Em até 3 dias úteis após a confirmação dos seus dados e do pagamento.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="transparency">
+      <strong>Nota de transparência:</strong> o Desenho Humano é classificado por fontes de referência (como a Wikipedia e a crítica especializada) como um sistema pseudocientífico — não possui validação em pesquisa revisada por pares. Oferecemos o mapa como ferramenta simbólica de autoconhecimento e reflexão, calculado com rigor astronômico na sua parte técnica (posições planetárias reais), não como diagnóstico médico, psicológico ou previsão garantida do futuro.
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" style="border-bottom:none;">
+  <div class="wrap">
+    <h2>Pronto para ver o seu?</h2>
+    <p class="lede">Data, hora e cidade de nascimento é tudo que precisamos para começar.</p>
+    <a href="https://wa.me/5516992631141?text=Ol%C3%A1!%20Quero%20meu%20Mapa%20de%20Desenho%20Humano%20por%20R%24180." class="cta">Pedir meu mapa no WhatsApp</a>
+    <div class="badge-row">
+      <span>Pagamento único de R$180</span>
+      <span>Entrega em até 3 dias úteis</span>
+      <span>Feito por Enterprise Brain</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Enterprise Brain — um produto da Matheus Pupim Soluções Empresariais</p>
+  <p>Contato: <a href="mailto:matheuspupin@gmail.com">matheuspupin@gmail.com</a> · <a href="https://wa.me/5516992631141">WhatsApp</a></p>
+</footer>
+
+</body>
+</html>
